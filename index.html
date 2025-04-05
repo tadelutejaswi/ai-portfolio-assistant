@@ -3,84 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tejaswi's AI Portfolio</title>
+  <title>My AI Interactive Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1 class="neon-text">Hi, I'm Tejaswi</h1>
-    <p>Welcome to my interactive AI portfolio!</p>
+    <h1>Hi, I'm <span class="glow">[Your Name]</span></h1>
+    <p>Welcome to my interactive portfolio!</p>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <main>
-    <!-- SKILLS -->
-    <section id="skills">
-      <h2 class="section-title">💡 Skills</h2>
-      <ul class="skills-list">
+    <section id="chat">
+      <div class="chatbox">
+        <input type="text" placeholder="Ask me about my projects..." id="chatInput" />
+        <button onclick="sendMessage()">Send</button>
+      </div>
+      <div id="chatOutput"></div>
+    </section>
+
+    <section id="about" class="content-section">
+      <h2>About Me</h2>
+      <p>I’m a passionate developer exploring AI, web dev & creative solutions.</p>
+    </section>
+
+    <section id="skills" class="content-section">
+      <h2>Skills</h2>
+      <ul>
         <li>Python 🐍</li>
         <li>Java ☕</li>
-        <li>JavaScript ⚡</li>
-        <li>HTML & CSS 🌐</li>
-        <li>Git & GitHub 🔧</li>
+        <li>HTML/CSS/JavaScript 💻</li>
+        <li>AI & Chatbot Development 🤖</li>
       </ul>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-      <h2 class="section-title">🚀 Projects</h2>
-      <div class="project-card">
-        <h3>Python To-Do List</h3>
-        <p>A terminal-based task manager using Python.</p>
-      </div>
-      <div class="project-card">
-        <h3>Java Student Manager</h3>
-        <p>Console app using OOP & CRUD concepts.</p>
-      </div>
-      <div class="project-card">
-        <h3>Weather App</h3>
-        <p>Live weather updates with JS + API integration.</p>
-      </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section id="certifications">
-      <h2 class="section-title">📜 Certifications</h2>
+    <section id="projects" class="content-section">
+      <h2>Projects</h2>
       <ul>
-        <li>Python for Everybody - Coursera</li>
-        <li>Responsive Web Design - freeCodeCamp</li>
-        <li>GitHub Fundamentals - Codecademy</li>
+        <li><strong>Python To-Do List</strong> – Terminal-based task manager</li>
+        <li><strong>Java Student Manager</strong> – Console CRUD app</li>
+        <li><strong>Weather App</strong> – Live weather using JS APIs</li>
+        <li><strong>AI Portfolio Assistant</strong> – You’re viewing it now! 🎉</li>
       </ul>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience">
-      <h2 class="section-title">📈 Experience</h2>
-      <p>Self-taught developer passionate about building smart web solutions with clean UI + AI integration.</p>
+    <section id="certifications" class="content-section">
+      <h2>Certifications</h2>
+      <p>🏅 AI for Everyone - Coursera</p>
+      <p>🏅 Web Development - freeCodeCamp</p>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2 class="section-title">📬 Contact</h2>
-      <p>Email: tejaswi@example.com</p>
-      <p>GitHub: <a href="https://github.com/tadelutejaswi" target="_blank">github.com/tadelutejaswi</a></p>
-    </section>
-
-    <!-- AI Chat (your original feature) -->
-    <section id="chatbot">
-      <h2 class="section-title">🤖 Ask Me Anything</h2>
-      <div class="chat-box">
-        <input type="text" id="userInput" placeholder="Ask me about my projects..." />
-        <button onclick="sendMessage()">Send</button>
-        <div id="chatOutput"></div>
-      </div>
+    <section id="contact" class="content-section">
+      <h2>Contact</h2>
+      <p>Email: yourname@example.com</p>
+      <p>GitHub: <a href="https://github.com/tadelutejaswi" target="_blank">tadelutejaswi</a></p>
     </section>
   </main>
 

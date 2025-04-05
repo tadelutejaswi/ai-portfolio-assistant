@@ -1,73 +1,61 @@
 body {
-    background-color: #111;
-    color: #ccc;
-    font-family: 'Courier New', monospace;
-    text-align: center;
     margin: 0;
-    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
   }
   
-  .neon-text {
+  .glow {
     color: cyan;
-    text-shadow: 0 0 8px cyan, 0 0 16px cyan;
+    text-shadow: 0 0 10px cyan;
   }
   
-  nav {
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     margin: 20px 0;
   }
+  
   nav a {
-    margin: 0 15px;
     color: cyan;
     text-decoration: none;
     font-weight: bold;
   }
   
-  .section-title {
-    font-size: 24px;
-    color: #0ff;
-    margin-top: 50px;
-    text-shadow: 0 0 5px #0ff;
+  .content-section {
+    padding: 3rem;
+    border-top: 1px solid #444;
   }
   
-  .skills-list, ul {
-    list-style: none;
-    padding: 0;
-    font-size: 18px;
+  .chatbox {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
   }
   
-  .project-card {
-    background: rgba(0, 255, 255, 0.1);
-    border: 1px solid cyan;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px auto;
-    width: 80%;
-    max-width: 500px;
-  }
-  
-  .chat-box {
-    margin: 30px auto;
-    border: 2px solid cyan;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-    padding: 20px;
-  }
-  
-  input {
+  #chatInput {
     padding: 10px;
-    width: 70%;
+    width: 300px;
     background: #222;
-    border: 1px solid #aaa;
-    color: white;
+    color: #fff;
+    border: 1px solid cyan;
   }
   
   button {
-    padding: 10px;
+    padding: 10px 20px;
     background: cyan;
+    color: black;
     border: none;
     cursor: pointer;
-    color: black;
     font-weight: bold;
+  }
+  
+  #chatOutput {
+    margin-top: 20px;
   }
   

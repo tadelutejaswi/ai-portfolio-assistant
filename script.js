@@ -1,17 +1,61 @@
-function sendMessage() {
-    const userInput = document.getElementById("userInput").value;
-    const output = document.getElementById("chatOutput");
-    const response = `🤖 Sorry! AI responses are simulated for now. Try typing: "show skills" or "what are your projects?"`;
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+  }
   
-    const message = document.createElement("p");
-    message.textContent = `🧑: ${userInput}`;
-    output.appendChild(message);
+  .glow {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+  }
   
-    const botReply = document.createElement("p");
-    botReply.textContent = response;
-    botReply.style.color = 'cyan';
-    output.appendChild(botReply);
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 20px 0;
+  }
   
-    document.getElementById("userInput").value = "";
+  nav a {
+    color: cyan;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .content-section {
+    padding: 3rem;
+    border-top: 1px solid #444;
+  }
+  
+  .chatbox {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  #chatInput {
+    padding: 10px;
+    width: 300px;
+    background: #222;
+    color: #fff;
+    border: 1px solid cyan;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: cyan;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #chatOutput {
+    margin-top: 20px;
   }
   
