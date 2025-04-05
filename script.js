@@ -1,35 +1,17 @@
-async function handleUserInput() {
-    const input = document.getElementById("user-input").value;
-    const chatLog = document.getElementById("chat-log");
+function sendMessage() {
+    const userInput = document.getElementById("userInput").value;
+    const output = document.getElementById("chatOutput");
+    const response = `🤖 Sorry! AI responses are simulated for now. Try typing: "show skills" or "what are your projects?"`;
   
-    if (input.trim() === "") return;
+    const message = document.createElement("p");
+    message.textContent = `🧑: ${userInput}`;
+    output.appendChild(message);
   
-    appendMessage("You", input);
+    const botReply = document.createElement("p");
+    botReply.textContent = response;
+    botReply.style.color = 'cyan';
+    output.appendChild(botReply);
   
-    const response = await getAIResponse(input);
-    appendMessage("AI", response);
-  
-    document.getElementById("user-input").value = "";
-  }
-  
-  function appendMessage(sender, message) {
-    const chatLog = document.getElementById("chat-log");
-    chatLog.innerHTML += `<p><strong>${sender}:</strong> ${message}</p>`;
-    chatLog.scrollTop = chatLog.scrollHeight;
-  }
-  
-  async function getAIResponse(userInput) {
-    const responseMap = await fetch("data.json").then(res => res.json());
-  
-    const lowerInput = userInput.toLowerCase();
-    if (lowerInput.includes("project")) {
-      return responseMap.projects;
-    } else if (lowerInput.includes("skills")) {
-      return responseMap.skills;
-    } else if (lowerInput.includes("contact")) {
-      return responseMap.contact;
-    } else {
-      return "I'm your portfolio assistant. Try asking about my projects, skills, or how to contact me!";
-    }
+    document.getElementById("userInput").value = "";
   }
   
